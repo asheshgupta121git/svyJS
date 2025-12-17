@@ -81,25 +81,25 @@
 
 // simple object
 
-const atte = {
-  raJ: 78,
-  jai: 34,
-  rahul: 89,
-  shiv: 65,
-  joy: 45,
-  sam: 90,
-};
+// const atte = {
+//   raJ: 78,
+//   jai: 34,
+//   rahul: 89,
+//   shiv: 65,
+//   joy: 45,
+//   sam: 90,
+// };
 
-function attendence(obj) {
-  for (name in obj) {
-    if (obj[name] > 75) {
-      console.log(`${name} is valid for exam`);
-    } else {
-      console.log(`${name} is not valid for exam`);
-    }
-  }
-}
-attendence(atte);
+// function attendence(obj) {
+//   for (name in obj) {
+//     if (obj[name] > 75) {
+//       console.log(`${name} is valid for exam`);
+//     } else {
+//       console.log(`${name} is not valid for exam`);
+//     }
+//   }
+// }
+// attendence(atte);
 
 // WAP to print all number who is divisible by 11 in the ranfe of 101 to 501
 
@@ -108,14 +108,185 @@ attendence(atte);
 // let str = "apple"
 // opt = "elppa"
 
-function revString(str) {
-  rev = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    console.log(str[i]);
-    rev = rev + str[i];
-  }
-  console.log(rev);
-}
-a = "hello";
-revString(a);
+// function revString(str) {
+//   rev = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     console.log(str[i]);
+//     rev = rev + str[i];
+//   }
+//   console.log(rev);
+// }
+// a = "hello";
+// revString(a);
 
+
+
+// write a function that return the no. of vowels in a string args. 
+// function find(str){
+//    const vowels="aeiouAEIOU";
+//    let count = 1;
+//    for(let char of str){
+//      if(vowels.includes(char)){
+//         count++
+//      }
+//      return count
+//    }
+// 
+
+// console.log()
+let str  = "this is man"
+
+function countVowel(str){
+    let count = 0;
+
+    for(let i =0;i<str.length;i++){
+        console.log(str[i])
+        if(str[i] == 'a' ||str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' 
+           ){
+            count =  count +1
+           }
+    }
+
+    console.log(count)
+}
+
+// countVowel(str)
+
+
+
+
+// function expression. 
+
+// diff way to write a function. 
+
+
+
+// function of sum of two numbers 
+
+
+// function funcName(){
+
+//     // task 
+// }
+
+
+let sum  = function (num1 , num2){
+    console.log(num1 +num2)
+}
+
+
+let mul = function(num1 , num2){
+    console.log(num1* num2)
+}
+
+
+// sum(2,3)
+// mul(2,3)
+
+
+// write  a function that return all the number in an array who are greater then the given num. 
+
+
+
+// arr = [12,3,4,5,6]  el = 3
+// 4,5,6,12
+
+let arr = [12,3,4,5,6]
+let el = 3
+let greaterNum = function(arr, el){
+    for(let i =0; i< arr.length;i++){
+        if(arr[i] > el){
+            console.log(arr[i])
+        }
+    }
+}
+
+
+// greaterNum(arr, el)
+
+
+
+
+// scope in js. 
+
+// scope determines the accessibility of object variable , function in different part of code. 
+
+
+
+// {
+
+//     let animal = "lion"
+//     console.log(animal) // error
+//     animal = "tiger"
+//     console.log(animal)
+
+//     let fruit = "mango"
+
+//     {
+//         console.log(fruit)
+//     }
+// }
+
+// console.log(animal) // error
+
+
+// function outer(){
+//     let a = 10;
+//     let b = 20;
+//     console.log(a)
+
+//     function inner(){
+//         console.log(b)
+//         let c = 30
+//     }
+//     inner()
+
+//     console.log(c) // here it gives error
+// }
+
+// outer()
+// console.log(a) // error or value
+
+
+function one(){
+    let a = 10;
+    let b = 20;
+
+    function two(){
+        console.log(a+b)
+        var c = 30;
+    }
+    // function call for two is missing
+    console.log(c) // it gives error.
+    console.log(a)
+}
+
+// one()
+
+
+// return keyword is used to return some value form the functon. 
+
+function retrunSum(a,b){
+    let sum = a+b
+    return sum // 
+}
+
+// let res = retrunSum(10,20)
+// console.log(res)
+
+// task write a function that retun the concatenation of all the strings in an array. 
+
+
+// let array = ["hello" , " this is ", "nice ", " day"]
+
+// str = "hello this is nice day" 
+
+let array = ["hello" , " this is ", "nice ", " day"]
+let stringres = ""
+for(let i = 0 ;i < array.length ;i++)
+{
+    stringres += array[i]
+    console.log(array[i])
+}
+
+console.log(stringres)
